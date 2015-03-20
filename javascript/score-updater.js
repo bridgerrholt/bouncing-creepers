@@ -10,10 +10,5 @@ scoreUpdater = function() {
 	xAdd = Math.round((x*addMax/xMid)*0.1)*10;
 	yAdd = Math.round((y*addMax/yMid)*0.1)*10;
 
-	console.log(addMax);
-	console.log(xMid);
-	console.log(xAdd);
-	console.log(yAdd);
-
 	g_game.score += xAdd+yAdd;
 };

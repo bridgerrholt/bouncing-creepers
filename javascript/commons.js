@@ -19,11 +19,20 @@ g_game.keyBinds = {};
 g_game.gameLoop;
 
 g_game.images = [];
+g_game.imageMap = {};
+
+g_game.spawnTimer;
+g_game.spawnTimerSet;
 
 g_game.boxes = [];
-g_game.boxTimer;
-g_game.boxTimerSet;
 g_game.boxMaxSpeed;
+
+g_game.itemTiles = [];
+g_game.itemTileEraseTimer;
+
+g_game.itemTileSpawnChance;
+g_game.itemTileSpawnSpace;
+g_game.itemTileSpawnSpaceMax;
 
 g_game.playerSpawnRadius;
 
@@ -49,6 +58,7 @@ var draw = function(){};
 var drawSprite = function(){};
 
 var Box = function(){};
+var ItemTile = function(){};
 
 var randRangeExt = function(){};
 var randRange = function(){};

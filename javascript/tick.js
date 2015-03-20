@@ -1,14 +1,24 @@
 tick = function() {
-
 	if (g_game.menu === 0) {
 		var dead = false;
 
-		if (g_game.boxTimer > 0) {
-			g_game.boxTimer--;
+		if (g_game.spawnTimer > 0) {
+			g_game.spawnTimer--;
 		} else {
 			g_game.boxes.push(new Box());
 			g_game.boxMaxSpeed += 0.2;
-			g_game.boxTimer = g_game.boxTimerSet;
+			g_game.spawnTimer = g_game.spawnTimerSet;
+
+			if (g_game.itemTileSpawnSpace === 0) {
+				if (randRange(0, g_game.itemTileSpawnChance) === 0) {
+					g_game.itemTiles.push(
+						new ItemTile(g_game.imageMap.diamondHelmetItem));
+					g_game.itemTileSpawnSpace = g_game.itemTileSpawnSpaceMax;
+					console.log(g_game.itemTiles);
+				}
+			} else {
+				g_game.itemTileSpawnSpace--;
+			}
 		}
 
 		for (var i=0; i<g_game.boxes.length; i++) {
@@ -18,8 +28,13 @@ tick = function() {
 			}
 		}
 
+		for (var i=0; i<g_game.itemTiles.length; i++) {
+			if (!g_game.itemTiles[i].update()) {
+				g_game.itemTiles.splice(i, 1);
+			}
+		}
+
 		if (g_game.scoreTimer === 0) {
-			console.log("AY");
 			scoreUpdater();
 			g_game.scoreTimer = g_game.scoreTimerMax;
 		} else {

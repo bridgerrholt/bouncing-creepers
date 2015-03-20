@@ -12,10 +12,15 @@ init = function() {
 	g_game.canvasW = g_game.canvas.width;
 	g_game.canvasH = g_game.canvas.height;
 
-	g_game.boxTimerSet = g_game.frameRate;
+	g_game.spawnTimerSet = g_game.frameRate;
 	g_game.playerSpawnRadius = 200;
 
 	g_game.menu = 2;
+
+	g_game.itemTileEraseTimer = 300;
+
+	g_game.itemTileSpawnChance = 5;
+	g_game.itemTileSpawnSpaceMax = 6;
 
 	g_game.pauseCounter = 0
 	g_game.canPause = true
