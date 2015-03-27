@@ -36,5 +36,7 @@ draw = function() {
 		g_game.ctx.fillText("Score: " + String(g_game.score), 1, 105);
 		g_game.ctx.font = "20px Times";
 		g_game.ctx.fillText("you have " + String(Math.abs(g_game.pauseCounter - 4)) + " pause(s) left", 1, 130)
+		g_game.ctx.fillText("your last score was " + String(g_game.lastScore), 1, 150)
+		g_game.ctx.fillText("your best score so far is " + String(g_game.bestScore), 1, 170)
 	}
 };

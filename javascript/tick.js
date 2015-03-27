@@ -1,4 +1,5 @@
 tick = function() {
+	console.log(g_game.spawnTimer);
 	if (g_game.menu === 0) {
 		var dead = false;
 
@@ -12,7 +13,7 @@ tick = function() {
 			if (g_game.itemTileSpawnSpace === 0) {
 				if (randRange(0, g_game.itemTileSpawnChance) === 0) {
 					g_game.itemTiles.push(
-						new ItemTile(g_game.imageMap.diamondHelmetItem));
+						new ItemTile(randRange(1, 4)));
 					g_game.itemTileSpawnSpace = g_game.itemTileSpawnSpaceMax;
 					console.log(g_game.itemTiles);
 				}

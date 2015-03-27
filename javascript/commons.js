@@ -20,6 +20,7 @@ g_game.gameLoop;
 
 g_game.images = [];
 g_game.imageMap = {};
+g_game.cursorMap = {};
 
 g_game.spawnTimer;
 g_game.spawnTimerSet;
@@ -35,6 +36,8 @@ g_game.itemTileSpawnSpace;
 g_game.itemTileSpawnSpaceMax;
 
 g_game.playerSpawnRadius;
+g_game.playerHelmet;					// 0: none, 1: leather, 2: iron, 3: diamond
+g_game.playerHelmetImage;
 
 g_game.menu;
 
@@ -45,6 +48,9 @@ g_game.score;
 g_game.scoreTimer;
 g_game.scoreTimerMax;
 g_game.scoreMax;
+
+g_game.lastScore;
+g_game.bestScore;
 
 
 var init = function(){};

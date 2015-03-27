@@ -28,11 +28,14 @@ init = function() {
 	g_game.scoreTimerMax = g_game.frameRate;
 	g_game.scoreTimer = g_game.scoreTimerMax;
 	g_game.scoreMax = 100;
+	
+	g_game.lastScore = 0;
+	g_game.bestScore = 0;
 
 
 	getInput();
 	loadMedia();
-	//reset();
+	reset();
 
 	if (typeof g_game.gameLoop != "undefined") clearInterval(g_game.gameLoop);
 	g_game.gameLoop = setInterval(tick, 1000/g_game.frameRate);

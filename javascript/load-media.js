@@ -1,6 +1,11 @@
 loadMedia = function() {
 	var src = "resources/images/";
 
+	g_game.cursorMap = {
+		playerLeatherHelmet: src+"player-leather-helmet.gif",
+		playerIronHelmet: src+"player-iron-helmet.gif",
+		playerDiamondHelmet: src+"player-diamond-helmet.gif"
+	};
 
 	g_game.images.push(loadSprite("creeperHead",
 		src + "creeper_head.png"));
@@ -10,18 +15,13 @@ loadMedia = function() {
 
 	g_game.images.push(loadSprite("diamondHelmetItem",
 		src + "diamond_helmet_item.png"));
-	g_game.images.push(loadSprite("diamondHelmet",
-		src + "diamond_helmet.png"));
 
 	g_game.images.push(loadSprite("ironHelmetItem",
 		src + "iron_helmet_item.png"));
-	/*g_game.images.push(loadSprite("ironHelmet",
-		src + "iron_helmet.png"));*/
 
 	g_game.images.push(loadSprite("leatherHelmetItem",
-		src + "leather_helmet_item.png"))
-	/*g_game.images.push(loadSprite("leatherHelmet",
-		src + "leather_helmet.png"));*/
+		src + "leather_helmet_item.png"));
+
 };
 
 loadSprite = function(name, src) {
