@@ -1,5 +1,4 @@
 tick = function() {
-	console.log(g_game.spawnTimer);
 	if (g_game.menu === 0) {
 		var dead = false;
 
@@ -15,7 +14,6 @@ tick = function() {
 					g_game.itemTiles.push(
 						new ItemTile(randRange(1, 4)));
 					g_game.itemTileSpawnSpace = g_game.itemTileSpawnSpaceMax;
-					console.log(g_game.itemTiles);
 				}
 			} else {
 				g_game.itemTileSpawnSpace--;
@@ -43,7 +41,7 @@ tick = function() {
 		}
 
 		if (dead) {
-			console.log(g_game.boxes.length)
+			
 			reset();
 		}
 

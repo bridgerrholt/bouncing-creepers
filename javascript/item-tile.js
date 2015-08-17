@@ -6,25 +6,30 @@ ItemTile = function(helmetType) {
 	this.index = g_game.itemTiles[g_game.itemTiles.length];
 
 	this.helmetType = helmetType;
+	console.log(this.helmetType);
 
 	this.image = 0;
 	this.cursorName = '';
-	switch(this.hemletType) {
+	switch(randRange(1, 4)) {
 		case 1:
 			this.image = g_game.imageMap.leatherHelmetItem;
 			this.cursorName = "playerLeatherHelmet";
+			g_game.plyaerHelmet = 1
 			break;
 		case 2:
 			this.image = g_game.imageMap.ironHelmetItem;
 			this.cursorName = "playerIronHelmet";
+			g_game.plyaerHelmet = 2
 			break;
 		case 3:
 			this.image = g_game.imageMap.diamondHelmetItem;
 			this.cursorName = "playerDiamondHelmet";
+			g_game.plyaerHelmet = 3
 			break;
 		default:
 			this.image = g_game.imageMap.leatherHelmetItem;
 			this.cursorName = "playerLeatherHelmet";
+			
 			break;
 	}
 
@@ -91,7 +96,6 @@ ItemTile.prototype.collision = function() {
 
 	if (this.x < mouse_rect.x2 && this.x+this.w > mouse_rect.x1 &&
 		this.y < mouse_rect.y2 && this.y+this.h > mouse_rect.y1) {
-			g_game.playerHelmet = this.helmetType;
 			g_game.playerHelmetImage = this.image;
 			$("#main-canvas").css("cursor", "url(" + g_game.cursorMap[this.cursorName] + ") 15 15, auto");
 			return false;
