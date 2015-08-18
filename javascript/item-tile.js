@@ -14,17 +14,17 @@ ItemTile = function(helmetType) {
 		case 1:
 			this.image = g_game.imageMap.leatherHelmetItem;
 			this.cursorName = "playerLeatherHelmet";
-			g_game.plyaerHelmet = 1
+			g_game.playerHelmet = 1
 			break;
 		case 2:
 			this.image = g_game.imageMap.ironHelmetItem;
 			this.cursorName = "playerIronHelmet";
-			g_game.plyaerHelmet = 2
+			g_game.playerHelmet = 2
 			break;
 		case 3:
 			this.image = g_game.imageMap.diamondHelmetItem;
 			this.cursorName = "playerDiamondHelmet";
-			g_game.plyaerHelmet = 3
+			g_game.playerHelmet = 3
 			break;
 		default:
 			this.image = g_game.imageMap.leatherHelmetItem;
